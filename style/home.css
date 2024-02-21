@@ -22,7 +22,7 @@ hr {
 
 .play_buton {
   position: absolute;
-  margin: 25% 51.5%;
+  margin: 25% 48%;
   cursor: pointer;
   transition: transform 0.7s;
 }
@@ -44,7 +44,6 @@ hr {
 } */
 
 .rightHeroContainer {
-  padding: 7% 7%;
   background: linear-gradient(
     to bottom left,
     var(--background-dark-grey),
@@ -58,6 +57,7 @@ hr {
 
 .heading_content {
   /* padding: 5% 0 0 5%; */
+  padding: 15%;
 }
 
 .herContainer > * {
@@ -66,7 +66,7 @@ hr {
 
 .reusable_heading {
   font-size: var(--heading-font-size);
-  height: fit-content;
+  overflow-y: hidden;
   font-weight: 200;
 }
 
@@ -82,6 +82,32 @@ hr {
 
 .leftHeroContainer {
   background-color: var(--background-light-grey);
+}
+
+.glass_tile_specs3 {
+  padding: 3% 5%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--glass-effect-tile);
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+
+.specificaions {
+  display: flex;
+  flex-direction: column;
+}
+
+.specificaions h3 {
+  font-weight: 700;
+}
+
+.specificaions p {
+  padding: 0;
+  margin: 0%;
 }
 
 .button_white {
@@ -111,7 +137,7 @@ hr {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding-top: 5%;
+  padding: 5% 0;
 }
 
 .vehicle_element img {
@@ -274,6 +300,10 @@ hr {
   padding: 7%;
   background-color: var(--background-light-grey);
   color: var(--white);
+}
+
+.clientTitles {
+  padding-right: 5%;
 }
 
 .clientTitles img {

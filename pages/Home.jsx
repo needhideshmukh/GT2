@@ -216,6 +216,23 @@ export default function Home() {
                   }
                 />
               </div>
+
+              <div className="glass_tile_specs3">
+                <div className="specificaions">
+                  <h3>Title1</h3>
+                  <p>100 Km</p>
+                </div>
+
+                <div className="specificaions">
+                  <h3>Title1</h3>
+                  <p>100 Km</p>
+                </div>
+
+                <div className="specificaions">
+                  <h3>Title1</h3>
+                  <p>100 Km</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
