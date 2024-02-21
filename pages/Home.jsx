@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 // pages/index.js
+"use client"
 import React, { useState, useRef, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
