@@ -7,11 +7,11 @@ import Footer from "../components/Footer"
 import "../style/home.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
-// import { useClient } from "next/client"
+import { useClient } from "next/client"
 
 export default function Home() {
   //-----
-  // useClient()
+  useClient()
 
   const [isToggled, setIsToggled] = useState(false)
   const [index, setIndex] = useState(0)
