@@ -1,0 +1,118 @@
+/* * {
+  font-family: var(--primary-font-family);
+  font-size: var(--paragraph-font-size);
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 2%;
+  color: var(--white);
+  background-color: var(--background-dark-grey);
+}
+.hamburgerMenu {
+  display: none;
+}
+
+.logo img {
+  width: 100%; 
+}
+
+.tabs a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+} */
+
+/* Media query for mobile devices */
+/* @media screen and (max-width: 768px) {
+  * {
+    max-width: 100%; 
+    padding: 0; 
+  }
+
+  .navbarContainer {
+    margin: 0% 15% 10% 10%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70vw;
+    margin-left: auto;
+    transform: translateX(50%);
+  }
+
+  .logo img {
+    padding-bottom: 5%;
+  }
+
+  .tabs a {
+    padding-bottom: 5%;
+  }
+
+  .hamburgerMenu {
+    margin-left: auto;
+    display: block;
+    height: 30px;
+  }
+} */
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 2%;
+  background-color: var(--background-dark-grey);
+  color: var(--white);
+}
+
+.hamburgerMenu {
+  display: none;
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--background-dark-grey); /* Adjust background color */
+  padding: 20px;
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  overflow: hidden; /* Hide overflow to prevent content from showing during transition */
+  display: none;
+  transition: max-height 0.5s ease-out; /* Smooth transition */
+}
+
+.menuItems.show {
+  display: flex;
+  max-height: max-content; /* Adjust max-height to fit your menu content */
+}
+
+.menuItems a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .navbarContainer {
+    margin: 0;
+    position: relative;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    height: 30px;
+  }
+
+  .tabs {
+    display: none;
+  }
+}

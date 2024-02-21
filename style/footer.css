@@ -1,0 +1,60 @@
+* {
+  font-family: var(--primary-font-family);
+  font-size: var(--paragraph-font-size);
+}
+
+.footer {
+  background-color: var(--secondary-white);
+  color: var(--font-black);
+  padding: 2%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content > div {
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  font-size: var(--paragraph-font-size);
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content li {
+  padding: 5% 0;
+}
+
+.content a {
+  text-decoration: none;
+  color: var(--font-black);
+  margin-bottom: 5%;
+}
+
+.newsletter input,
+.newsletter textarea {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 5%;
+  border: none;
+  background-color: rgb(204, 204, 204, 0.3);
+  resize: none;
+}
+
+.newsletter textarea {
+  height: 100px; /* Set the fixed height for the textarea */
+  overflow: auto; /* Enable scrolling when content exceeds the fixed height */
+}
+
+/* .linksColumn {
+  display: flex;
+  flex-direction: column;
+} */
