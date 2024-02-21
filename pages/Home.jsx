@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 // pages/index.js
@@ -470,3 +471,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
