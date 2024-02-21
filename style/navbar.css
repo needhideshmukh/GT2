@@ -66,6 +66,11 @@
   background-color: var(--background-dark-grey);
   color: var(--white);
 }
+.navbarContainer a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
 
 .hamburgerMenu {
   display: none;
@@ -85,7 +90,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
   overflow: hidden; /* Hide overflow to prevent content from showing during transition */
   display: none;
-  transition: max-height 0.5s ease-out; /* Smooth transition */
+  transition: max-height 0.5s ease; /* Smooth transition */
 }
 
 .menuItems.show {

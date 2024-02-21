@@ -8,10 +8,8 @@ import Footer from "../components/Footer"
 import "../style/home.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
-import { useRouter } from "next/router"
 
-function Home() {
-  const router = useRouter()
+export default function Home() {
   const [isToggled, setIsToggled] = useState(false)
   const [index, setIndex] = useState(0)
 
@@ -468,5 +466,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home

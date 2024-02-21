@@ -4,7 +4,7 @@ import "../style/navbar.css"
 import "../src/app/globals.css"
 import React, { useState } from "react"
 
-export default function Navbar() {
+function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
 
   const toggleMenu = () => {
@@ -45,12 +45,17 @@ export default function Navbar() {
           <button className="button_pink">CONTACT</button>
         </div>
       </div>
-      {/* <div className="tabs">
-        <a href="#">Tab 1</a>
-        <a href="#">Tab 2</a>
-        <a href="#">Tab 3</a>
-      </div> */}
+      <a href="#">I-HYBRID</a>
+      <a href="#">PURE EV</a>
+      <a href="#">ABOUT</a>
+      <a href="#">INSIGHTS</a>
+      <a href="#">MOBILITY SOLUTION</a>
+      <div>
+        <button className="button_pink">CONTACT</button>
+      </div>
+
       {showMenu && <div className="overlay" onClick={closeMenu}></div>}
     </div>
   )
 }
+export default Navbar
