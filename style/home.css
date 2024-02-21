@@ -66,6 +66,7 @@ hr {
 
 .reusable_heading {
   font-size: var(--heading-font-size);
+  height: fit-content;
   font-weight: 200;
 }
 
@@ -146,15 +147,16 @@ hr {
 .pureEVContainer {
   background-color: var(--background-dark-grey);
   color: var(--white);
-  padding: 0% 7% 7% 7%;
+  padding: 0% 7% 7% 0%;
   overflow-y: hidden;
   height: 110vh;
 }
 .arrowsBackground {
   /* display: none; */
   height: 110vh;
-  transform: translateX(-30%);
-  padding-right: 25px;
+  transform: translateX(40%);
+  z-index: 4;
+  padding-right: 40px;
 }
 
 .heading_right {
@@ -175,7 +177,6 @@ hr {
 
 .glass_tile_specs {
   transform: translateX(-20%);
-  z-index: 5;
   padding: 3% 5%;
   background-color: var(--glass-effect-tile);
   border-radius: 30px;
@@ -195,7 +196,6 @@ hr {
 }
 
 .components_uplift {
-  z-index: -0.1;
   position: absolute;
 }
 
@@ -279,25 +279,31 @@ hr {
 .clientTitles img {
   width: 150px;
   border-radius: 30px;
-
   scroll-snap-align: center; /* Snap items to center */
   display: flex;
   flex: 0 0 auto; /* Ensure each item has fixed size */
   justify-content: center;
   align-items: center;
+  margin-right: 70px;
 }
 
-.clientLogos {
+/* .clientLogos {
   display: grid;
-  grid-auto-flow: column; /* Arrange items in a row */
-  gap: 6%; /* Adjust as needed */
+  grid-auto-flow: column;
   overflow: hidden;
-  width: 100%; /* Full width */
-  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  width: 100%;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+  -webkit-overflow-scrolling: touch;
   text-align: center;
   row-gap: 10%;
+} */
+
+.clientLogos {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ------------------------> Awards & Associations */

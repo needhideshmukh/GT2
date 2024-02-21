@@ -245,7 +245,7 @@ export default function Home() {
 
           <div>
             <h1 className="reusable_heading heading_right">
-              Green Tiger converts your ride to <br /> <span>PURE EV</span>
+              Green Tiger converts your ride to <br /> <span> PURE EV</span>
             </h1>
 
             <div className="evComponents_specs_container">
@@ -357,7 +357,7 @@ export default function Home() {
         <div className="ourClients">
           <div className="centerHeading">
             <h1 className="reusable_heading">
-              Trusted by Industry Leading
+              Trusted by Industry Leading <br />
               <span>Clients</span>{" "}
             </h1>
             <br />
