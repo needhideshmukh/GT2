@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 // pages/index.js
@@ -7,12 +8,10 @@ import Footer from "../components/Footer"
 import "../style/home.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
-import { useClient } from "next/client"
+import { useRouter } from "next/router"
 
-export default function Home() {
-  //-----
-  useClient()
-
+function Home() {
+  const router = useRouter()
   const [isToggled, setIsToggled] = useState(false)
   const [index, setIndex] = useState(0)
 
@@ -469,3 +468,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
