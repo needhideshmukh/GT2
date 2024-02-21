@@ -2,16 +2,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 // pages/index.js
+"use client"
 import React, { useState, useRef, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import "../style/home.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
-import { useRouter } from "next/router"
+// import { useClient } from "next/client"
 
-function Home() {
-  const router = useRouter()
+export default function Home() {
+  //-----
+  // useClient()
+
   const [isToggled, setIsToggled] = useState(false)
   const [index, setIndex] = useState(0)
 
