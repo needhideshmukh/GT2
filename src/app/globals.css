@@ -31,9 +31,9 @@ body {
   --heading-font-size: 30px;
   --green-heading: 60px;
 
-  --paragraph-font-size-mobile: 10px;
+  --paragraph-font-size-mobile: 15px;
   --heading-font-size-mobile: 20px;
-  --green-heading-mobile: 50px;
+  --green-heading-mobile: 40px;
 }
 
 .button_pink {

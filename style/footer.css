@@ -54,7 +54,58 @@
   overflow: auto; /* Enable scrolling when content exceeds the fixed height */
 }
 
-/* .linksColumn {
-  display: flex;
-  flex-direction: column;
-} */
+/* -----------------------------> mobile view */
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-wrap: wrap; /* Allow flex items to wrap into multiple rows */
+  }
+
+  .newsletter {
+    width: 100%; /* Set width to 100% for the newsletter section on mobile */
+    margin-top: auto; /* Push the newsletter section to the bottom */
+  }
+
+  .linksColumn {
+    width: 30%; /* Set width to 50% for each column on mobile to have two columns side by side */
+  }
+
+  .content h3 {
+    text-align: center; /* Center align heading in each column */
+  }
+
+  .content ul {
+    padding-left: 0; /* Remove left padding from ul */
+  }
+
+  .content li {
+    padding-left: 0; /* Remove left padding from li */
+  }
+
+  .content a {
+    display: block; /* Make links block level to occupy full width of column */
+    text-align: center; /* Center align links */
+  }
+
+  .newsletter {
+    text-align: center;
+  }
+
+  .newsletter input[type="email"],
+  .newsletter textarea {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border: none;
+    background-color: rgba(204, 204, 204, 0.3);
+    resize: none;
+  }
+
+  .newsletter textarea {
+    height: 100px;
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds the fixed height */
+  }
+
+  .content li {
+    padding: 0% 0 5% 0;
+  }
+}

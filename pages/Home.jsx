@@ -75,7 +75,7 @@ export default function Home() {
   useEffect(() => {
     const container = containerRef.current
     const items = container.querySelectorAll(".clientTitles")
-    const itemWidth = items[0].offsetWidth // Get width of one item
+    const itemWidth = items[0].offsetWidth + 50 // Get width of one item + 50px gap
     itemWidthRef.current = itemWidth
 
     // Function to scroll the container to the next item
@@ -260,13 +260,13 @@ export default function Home() {
             />
           </div>
 
-          <div>
+          <div className="glassContainer">
             <h1 className="reusable_heading heading_right">
               Green Tiger converts your ride to <br /> <span> PURE EV</span>
             </h1>
 
             <div className="evComponents_specs_container">
-              <div>
+              <div className="evVehicle">
                 <img src="../images/BOLT-Electric.png" alt="" />
               </div>
 
@@ -328,7 +328,9 @@ export default function Home() {
         {/* ----------------------------> Metrics */}
         <div className="metrics">
           <div className="metricText">
-            <h3 className="reusable_heading">Lorem ipsum dolor sit amet.</h3>
+            <h3 className="reusable_heading ImpactHeading">
+              Lorem ipsum dolor sit amet.
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
               temporibus! Dignissimos deserunt totam perferendis aperiam quam
@@ -386,8 +388,8 @@ export default function Home() {
           </div>
           <div className="clientLogos" ref={containerRef}>
             {clients.map((logos, index) => (
-              <div className="clientTitles" key={index}>
-                <img src={logos} alt="" />
+              <div key={index}>
+                <img className="clientTitles" src={logos} alt="" />
               </div>
             ))}
           </div>
@@ -436,7 +438,10 @@ export default function Home() {
             </p>
             <img src="../images/imageDummy.svg" alt="" />
             <br />
-            <button className="button_pink" style={{ width: "fit-content" }}>
+            <button
+              className="button_pink mobileStyle"
+              style={{ width: "fit-content" }}
+            >
               READ MORE
             </button>
           </div>

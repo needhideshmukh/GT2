@@ -59,7 +59,7 @@ const Footer = () => {
             <h3>Newsletter Subscription</h3>
             <input type="email" placeholder="Enter your email" />
             <textarea placeholder="Enter your message"></textarea>
-            <button className="button_pink ">SUBMIT</button>
+            <button className="button_pink">SUBMIT</button>
           </div>
         </div>
       </footer>

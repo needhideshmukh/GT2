@@ -263,10 +263,6 @@ hr {
   margin-bottom: 1rem;
 }
 
-/* .carousel_flex {
-  display: flex !important;
-} */
-
 /* ------------------------> metrics */
 .metrics {
   display: grid;
@@ -303,18 +299,16 @@ hr {
 }
 
 .clientTitles {
-  padding-right: 5%;
-}
-
-.clientTitles img {
   width: 150px;
   border-radius: 30px;
   scroll-snap-align: center; /* Snap items to center */
   display: flex;
+  flex-shrink: 0; /* Prevent items from shrinking */
+
   flex: 0 0 auto; /* Ensure each item has fixed size */
   justify-content: center;
   align-items: center;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 
 /* .clientLogos {
@@ -334,6 +328,7 @@ hr {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory; /* Optional: Snap scrolling */
 }
 
 /* ------------------------> Awards & Associations */
@@ -348,9 +343,8 @@ hr {
 
 .awardsSubHeading {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
   justify-content: center;
-  row-gap: 0%;
   /* height: 100vh; */
 }
 
@@ -367,6 +361,7 @@ hr {
 }
 
 .awardCards {
+  flex-shrink: 0; /* Prevent items from shrinking */
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -453,11 +448,13 @@ hr {
 
 .articleContainer {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
 }
 
 .articleCard {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: space-between;
   width: fit-content;
@@ -493,7 +490,7 @@ hr {
   }
   .rightHeroContainer {
     text-align: center;
-    height: 10hv;
+    height: 107vh;
   }
 
   .button_white {
@@ -502,12 +499,19 @@ hr {
 
   .vehicle_element {
     flex-direction: column;
+    transform: translateY(-20%);
   }
+
+  .vehicle_element img {
+    z-index: -100;
+  }
+
   .clients {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5% 0;
   }
 
   .clients p {
@@ -516,9 +520,206 @@ hr {
   }
 
   .play_buton {
-    position: absolute;
-    margin: 214% 41%;
-    cursor: pointer;
-    transition: transform 0.7s;
+    display: none;
+  }
+
+  .leftHeroContainer {
+    display: none;
+  }
+
+  .rightHeroContainer p {
+    padding: 2%;
+  }
+  /* ------------------------> Pure EV */
+  .pureEVContainer {
+    padding: 7% 0%;
+    /* overflow-y: hidden; */
+    height: 90vh;
+  }
+
+  .heading_right {
+    text-align: center;
+    padding: 7%;
+    align-self: center;
+  }
+
+  .arrowsBackground {
+    display: none;
+  }
+
+  .evComponents_specs_container {
+    display: block;
+    height: fit-content;
+  }
+
+  .evVehicle {
+    transform: translate(-20%, 50%);
+    width: 100%;
+  }
+
+  .glass_tile_specs {
+    transform: translate(0%, -50%);
+    padding: 5%;
+    height: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .glass_tile_specs h3 {
+    text-align: center;
+    font-size: var(--heading-font-size-mobile);
+  }
+
+  .glass_tile_specs li {
+    font-size: var(--paragraph-font-size-mobile);
+  }
+
+  .components_uplift {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ------------------------> B2B */
+
+  .carouselImage {
+    height: fit-content;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .carousel-item {
+    display: block;
+  }
+
+  .carousel_flex {
+    margin-bottom: 100%;
+  }
+
+  .carousel-caption {
+    margin-left: 0%;
+    margin-bottom: -85%;
+    text-align: center !important;
+  }
+
+  .carousel-indicators {
+    justify-content: center !important;
+    padding: 0;
+    margin-left: auto !important; /* 25% originally */
+    margin-right: auto !important;
+    margin-bottom: 1rem;
+  }
+
+  /* ------------------------> metrics */
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .metricNumber_icons {
+    padding-top: 10%;
+  }
+
+  .metricText p {
+    font-size: var(--paragraph-font-size-mobile);
+  }
+
+  .clientTitles {
+    border-radius: 30px;
+    scroll-snap-align: center; /* Snap items to center */
+    display: flex;
+    flex: 0 0 auto; /* Ensure each item has fixed size */
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+    padding-right: 10px;
+    width: 100%;
+  }
+  /* ------------------------> Awards */
+  .awardsSubHeading {
+    flex-wrap: nowrap;
+    animation: scrollAnimation 10s linear infinite; /* Apply scroll animation */
+  }
+
+  .awardsSubHeading:hover {
+    animation: none;
+  }
+  /* .awardsSubHeading:focus {
+    animation: none;
+  } */
+
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+      transform: translateX(calc(-100% - 140px)); /* Scroll to the end */
+    }
+  }
+
+  .waveBackground {
+    transform: rotate(90deg) translate(100%, 100%);
+    display: none;
+  }
+
+  .glass_tile_specs2 {
+    padding: 5%;
+  }
+
+  .awardCards {
+    width: auto; /* Allow cards to expand based on content */
+  }
+
+  /* ------------------------> Imapct */
+  .impactConainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image_desc {
+    width: 100%;
+  }
+  .impactPointers {
+    width: 100%;
+  }
+  .impact_title_desc {
+    text-align: left;
+  }
+
+  .image_desc {
+    text-align: center;
+    padding-bottom: 10%;
+  }
+
+  .mobileStyle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pinterIndex {
+    padding: 0% 4%;
+  }
+  /* ------------------------> Press */
+  .pressHeading {
+    font-weight: 700;
+    padding-bottom: 5%;
+  }
+
+  .articleCard {
+    width: fit-content;
+    animation: scrollAuto 18s linear infinite;
+    padding-right: 5%;
+  }
+
+  @keyframes scrollAuto {
+    0% {
+      transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+      transform: translateX(calc(-100% - 250px)); /* Scroll to the end */
+    }
   }
 }
