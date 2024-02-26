@@ -33,16 +33,6 @@ hr {
   transform: scale(1.2);
 }
 
-/* .rightHeroContainer {
-  padding: 7% 7% 2%;
-  background: radial-gradient(
-    at 0 225%,
-    var(--fluorescent-green),
-    0.5%,
-    var(--background-dark-grey)
-  );
-} */
-
 .rightHeroContainer {
   background: linear-gradient(
     to bottom left,
@@ -57,7 +47,7 @@ hr {
 
 .heading_content {
   /* padding: 5% 0 0 5%; */
-  padding: 15%;
+  padding: 15% 15% 0;
 }
 
 .herContainer > * {
@@ -175,11 +165,10 @@ hr {
   color: var(--white);
   padding: 0% 7% 7% 0%;
   overflow-y: hidden;
-  height: 110vh;
 }
 .arrowsBackground {
   /* display: none; */
-  height: 110vh;
+  height: max-content;
   transform: translateX(40%);
   z-index: 4;
   padding-right: 40px;
@@ -197,7 +186,7 @@ hr {
 }
 .evComponents_specs_container img {
   transform: translateX(20%);
-  width: 99%;
+  width: 100%;
   /* margin: 25% 0; */
 }
 
@@ -259,7 +248,7 @@ hr {
 .carousel-indicators {
   justify-content: flex-end !important;
   padding: 0;
-  margin-right: 37% !important; /* 25% originally */
+  margin-left: 75% !important; /* 25% originally */
   margin-bottom: 1rem;
 }
 
@@ -301,30 +290,12 @@ hr {
 .clientTitles {
   width: 150px;
   border-radius: 30px;
-  scroll-snap-align: center; /* Snap items to center */
-  display: flex;
-  flex-shrink: 0; /* Prevent items from shrinking */
-
-  flex: 0 0 auto; /* Ensure each item has fixed size */
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
+  padding-right: 10px;
 }
-
-/* .clientLogos {
-  display: grid;
-  grid-auto-flow: column;
-  overflow: hidden;
-  width: 100%;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  text-align: center;
-  row-gap: 10%;
-} */
 
 .clientLogos {
   display: flex;
+  justify-content: space-between;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -337,20 +308,22 @@ hr {
   background-color: var(--background-dark-grey);
   color: var(--white);
   width: 100%;
-  overflow-x: hidden !important;
   padding: 7%;
 }
 
 .awardsSubHeading {
   display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  overflow-x: hidden !important;
+
   flex-wrap: nowrap;
-  justify-content: center;
   /* height: 100vh; */
 }
 
 .waveBackground {
   position: absolute;
-  transform: translate(-20%, -10%);
+  transform: translate(-20%, -12%);
   width: 127vw;
 }
 
@@ -362,15 +335,20 @@ hr {
 
 .awardCards {
   flex-shrink: 0; /* Prevent items from shrinking */
-  width: fit-content;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2%;
+  margin: 1%;
 }
 
 .awardCards p {
   text-align: center;
+  font-size: var(--paragraph-font-size);
+}
+
+.awardCards h5 {
+  font-weight: 700;
 }
 
 .waveDiv {
@@ -393,7 +371,7 @@ hr {
   padding: 7%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .image_desc {
@@ -420,9 +398,16 @@ hr {
   background-color: hsla(120, 90%, 88%, 0.7);
   color: var(--primary-green);
   font-size: var(--heading-font-size);
-  border-radius: 50%;
-  padding: 1% 4%;
+  width: var(
+    --heading-font-size
+  ); /* Adjust the width and height to control the size of the circle */
+  height: var(--heading-font-size);
+  padding: 5%;
   margin-right: 5%;
+  border-radius: 50%; /* Ensures the container has a circular shape */
+  display: flex; /* Align content in the center */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
 }
 
 .ImpactHeading {
@@ -490,7 +475,7 @@ hr {
   }
   .rightHeroContainer {
     text-align: center;
-    height: 107vh;
+    height: fit-content;
   }
 
   .button_white {
@@ -498,6 +483,7 @@ hr {
   }
 
   .vehicle_element {
+    padding-top: 30%;
     flex-direction: column;
     transform: translateY(-20%);
   }
@@ -534,7 +520,7 @@ hr {
   .pureEVContainer {
     padding: 7% 0%;
     /* overflow-y: hidden; */
-    height: 90vh;
+    height: fit-content;
   }
 
   .heading_right {
@@ -549,21 +535,18 @@ hr {
 
   .evComponents_specs_container {
     display: block;
-    height: fit-content;
   }
 
   .evVehicle {
     transform: translate(-20%, 50%);
     width: 100%;
+    display: none;
   }
 
   .glass_tile_specs {
-    transform: translate(0%, -50%);
-    padding: 5%;
-    height: 100%;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 23%;
+    margin-right: 0;
     text-align: center;
   }
 
@@ -574,6 +557,7 @@ hr {
 
   .glass_tile_specs li {
     font-size: var(--paragraph-font-size-mobile);
+    /* text-align: left; */
   }
 
   .components_uplift {
@@ -611,6 +595,15 @@ hr {
     margin-bottom: 1rem;
   }
 
+  //newly added
+  .carouselContainer {
+    overflow-y: visible;
+  }
+
+  .carouselContent {
+    display: block;
+  }
+
   /* ------------------------> metrics */
   .metrics {
     display: flex;
@@ -639,29 +632,7 @@ hr {
     width: 100%;
   }
   /* ------------------------> Awards */
-  .awardsSubHeading {
-    flex-wrap: nowrap;
-    animation: scrollAnimation 10s linear infinite; /* Apply scroll animation */
-  }
-
-  .awardsSubHeading:hover {
-    animation: none;
-  }
-  /* .awardsSubHeading:focus {
-    animation: none;
-  } */
-
-  @keyframes scrollAnimation {
-    0% {
-      transform: translateX(0); /* Start at the beginning */
-    }
-    100% {
-      transform: translateX(calc(-100% - 140px)); /* Scroll to the end */
-    }
-  }
-
   .waveBackground {
-    transform: rotate(90deg) translate(100%, 100%);
     display: none;
   }
 
@@ -670,7 +641,7 @@ hr {
   }
 
   .awardCards {
-    width: auto; /* Allow cards to expand based on content */
+    width: 90vw; /* Allow cards to expand based on content */
   }
 
   /* ------------------------> Imapct */
@@ -700,7 +671,7 @@ hr {
   }
 
   .pinterIndex {
-    padding: 0% 4%;
+    font-size: var(--heading-font-size-mobile);
   }
   /* ------------------------> Press */
   .pressHeading {
@@ -712,6 +683,10 @@ hr {
     width: fit-content;
     animation: scrollAuto 18s linear infinite;
     padding-right: 5%;
+  }
+
+  .articleCard:hover {
+    animation-play-state: paused;
   }
 
   @keyframes scrollAuto {

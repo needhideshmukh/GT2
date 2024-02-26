@@ -24,33 +24,41 @@ export default function Home() {
 
   //Pure EV features
   const features = [
-    "Feature 1 Lorem ipsum dolor sit dolorem ullam, fuga distinctio nostrum,",
-    "Feature 2 amet consectetur adipisicing elit. ",
-    "Feature 3  Consectetur illum nulla iusto dolorum",
-    "Feature 4 dolorem ullam, fuga distinctio nostrum,",
+    "Make your rides more economical, clean and tech enabled with our pure EV conversion kit. And, extend their life too! ",
+    "Our pure EV retrofitment turns your old, petrol-guzzling scooter into a high-tech, eco-friendly EV. With unbeatable economics of ~25p per km and convenience.",
+    "Battery Subscription Cost of battery = 0! Just subscribe to the battery swapping service and swap batteries in 2 minutes at a reasonable monthly fee.",
+    "Battery Ownership Own your batter from day 1. Charge the removable battery anytime, anywhere.",
+    "Approved by RTOs, ARAI and all competent authorities. Coming soon! ",
   ]
 
   //B2B carousel Content
   const carouselContent = [
     {
       imageUrl: "../images/Rectangle 55.png",
-      captionHeader: "First slide label",
+      captionHeader: "Battery Pack",
       captionDescription:
-        "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        "All types of certified Li-ion battery packs, available as combination with our customisable BMS and telematics ",
     },
 
     {
       imageUrl: "../images/Rectangle 56.png",
-      captionHeader: "Second slide label",
+      captionHeader: "Battery Management System (BMS)",
       captionDescription:
-        "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        "Certified, Smart BMS with audio-visual integration, Bluetooth & CAN Communication ",
     },
 
     {
       imageUrl: "../images/Rectangle 57.png",
-      captionHeader: "Third slide label",
+      captionHeader: "Telematics",
       captionDescription:
-        "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        "Smart, nex-gen telematics including remote-lock customization, instant accident alerts, live location tracking, fuel-gauge monitoring",
+    },
+
+    {
+      imageUrl: "../images/Rectangle 55.png",
+      captionHeader: "Analytics",
+      captionDescription:
+        "Insights for your e-mobility ecosystem with our analytics solutions including BMS & controller metrics, rider profiling, environmental impact tracking & data visualisation",
     },
   ]
 
@@ -116,29 +124,154 @@ export default function Home() {
   //Awards content
 
   const awards = [
-    { title: "Title 1", description: "Lorem ipsum dolor sit amet. " },
-    { title: "Title 2", description: "Lorem ipsum dolor sit amet. " },
-    { title: "Title 3", description: "Lorem ipsum dolor sit amet. " },
-    { title: "Title 4", description: "Lorem ipsum dolor sit amet. " },
-    { title: "Title 5", description: "Lorem ipsum dolor sit amet. " },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Best Startup award ",
+      description:
+        "Conquest competition event organized by BITS PILANI in 2022 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "most promising innovative Startup in India",
+      description:
+        "•	Won the FICCI award as the most promising innovative Startup in India, in 2022 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Ministry of Heavy Industries (Govt. of India)",
+      description: "Financial Grant of US$ 300,000 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "ARAI (Automotive Research Association of India) ",
+      description: "Financial Grant of US$ 300,000 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "IIM Bangalore and Alstom, France ",
+      description: "Financial Grant of US$ 25,000 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Ministry of Electronics & IT (Govt. of India)",
+      description: "Investment of US$ 15,000 ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Part of",
+      description:
+        "BITS Pilani (PEIDS) and IIM Bangalore (NSRCEL) as well as NASSCOM Deep Tech Club",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "NASSCOM ",
+      description: "NASSCOM ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Ministry of Heavy Industries (MHI) ",
+      description: "Ministry of Heavy Industries (MHI) ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "MEITY  ",
+      description: "(Ministry of Electronics and Information Technology)  ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Startup India  ",
+      description: "Startup India  ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "NSRCELL IIM Bangalore  ",
+      description: "NSRCELL IIM Bangalore  ",
+    },
+    {
+      awardImage: "../images/Medal.svg",
+      title: "Bajaj Motors ",
+      description: "Bajaj Motors",
+    },
   ]
+
+  //Awards section auto Scrolling + mouse hover pause
+  const containerRef2 = useRef(null)
+  const itemWidthRef2 = useRef(0)
+  const scrollIntervalRef2 = useRef(null)
+
+  useEffect(() => {
+    const container = containerRef2.current
+    const items = container.querySelectorAll(".awardCards")
+    const itemWidth = items[0].offsetWidth // Get width of one item + 50px gap
+    itemWidthRef2.current = itemWidth
+
+    // Function to scroll the container to the next item
+    const scrollToNextItem = () => {
+      container.scrollLeft += itemWidth // Scroll one item width
+
+      // Reset scroll position to the beginning if reached the end
+      if (
+        container.scrollLeft >=
+        container.scrollWidth - container.clientWidth
+      ) {
+        container.scrollLeft = 0
+      }
+    }
+
+    // Auto-scroll every 3 seconds
+    scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+
+    // Pause auto-scrolling when the user interacts with the container
+    const handleMouseEnter = () => {
+      clearInterval(scrollIntervalRef2.current)
+    }
+
+    const handleMouseLeave = () => {
+      scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+    }
+
+    container.addEventListener("mouseenter", handleMouseEnter)
+    container.addEventListener("mouseleave", handleMouseLeave)
+
+    return () => {
+      container.removeEventListener("mouseenter", handleMouseEnter)
+      container.removeEventListener("mouseleave", handleMouseLeave)
+      clearInterval(scrollIntervalRef2.current)
+    }
+  }, [])
 
   //Impact points
 
   const impactPointers = [
-    { index: 1, title: "Title 1", description: "Lorem ipsum dolor sit amet. " },
+    {
+      index: 1,
+      title: "Roar of pioneering innovation, for all",
+      description:
+        "Bringing the world’s first electric and petrol hybrid 2-wheeler conversion kit to 28 crore 2-wheeler drivers of India",
+    },
     {
       index: 2,
-      title: "Title 2",
-      description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. ",
+      title: "Championing sustainability",
+      description:
+        "Enabling sustainable transportation at scale with 3Rs (Reduce, Reuse, and Recycle). Reuse the petrol 2-wheeler as an i-Hybrid vehicle. Reduce material scrappage by converting old vehicles into either i-Hybrid or Full EV. Recycle the vehicle with Green Tiger’s electric powertrain and extend its life by 5+ years. Enabled by our green manufacturing practices & auditable trail of carbon footprint for our EV OEM customers.",
     },
-    { index: 3, title: "Title 3", description: "Lorem ipsum dolor sit amet. " },
-    { index: 4, title: "Title 4", description: "Lorem ipsum dolor sit amet. " },
+    {
+      index: 3,
+      title: "Accessible, economic & easy riding for all ",
+      description:
+        "Evolved, affordable and convenient rides for 28 Cr+ riders with i-Hybrid & Full EV conversion solutions. No need to replace your old 2-wheeler, just evolve it into a better, cheaper and cleaner ride.  ",
+    },
+    {
+      index: 4,
+      title: "	Evolving the servicing ecosystem",
+      description:
+        "Gradual & smooth skill transition for all mechanics with i-Hybrid conversion. Eliminating livelihood risk of the many petrol scooter mechanics of India by going beyond EV-only mobility in a short span. Taking petrol & EVs hand-in-hand to secure, enable and positively transform the servicing ecosystem.",
+    },
     {
       index: 5,
-      title: "Title 5",
+      title: "Job creation & Make In India",
       description:
-        "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. ",
+        "Creating direct and indirect employment in India through services across the EV ecosystem, From vehicle conversions to manufacturing & distribution of EV powertrain components. Also, working with various institutions & government bodies on sustainable policy-making for the benefit of industry & society at large.",
     },
   ]
 
@@ -183,13 +316,25 @@ export default function Home() {
             <div className="rightHeroContainer">
               <div className="heading_content">
                 <h1 className="reusable_heading">
-                  World’s 1st Dual Power Mode <br />
+                  The world’s first hybrid 2-wheeler upgrade <br />
                   <span>I-HYBRID</span>
                 </h1>
                 <br />
                 <p>
-                  Green Tiger’s i-Hybrid is the world’s first EV with a backup
-                  of petrol engine.
+                  Evolve your ride to the best of both worlds. Upgrade your
+                  petrol engine scooter to efficient, eco-friendly electric
+                  transmission with the safety net of your petrol engine as
+                  backup.
+                  <br />
+                  <br />
+                  Charging the removable battery anytime, anywhere is easy.
+                  Switching between EV and petrol mode with just a flick is
+                  easier.
+                  <br />
+                  <br />
+                  Also, give your scooter the edge of smart nex-gen tech -
+                  remote locking, theft alert, fall alert, real-time vehicle
+                  diagnosis and more.
                 </p>
                 <div>
                   <button className="button_pink">READ MORE</button>
@@ -262,7 +407,8 @@ export default function Home() {
 
           <div className="glassContainer">
             <h1 className="reusable_heading heading_right">
-              Green Tiger converts your ride to <br /> <span> PURE EV</span>
+              EVolve your petrol ride to an electric one <br />{" "}
+              <span> PURE EV</span>
             </h1>
 
             <div className="evComponents_specs_container">
@@ -288,18 +434,28 @@ export default function Home() {
         <div className="b2bContainer">
           <div className="centerHeading">
             <h1 className="reusable_heading">
-              Green Tiger facilitates other companies in <br />{" "}
-              <span>B2B solutions</span>{" "}
+              Evolving business of EV OEMs at scale, one solution at a time
+              <br /> <span>B2B Mobility Solutions</span>{" "}
             </h1>
             <br />
             <p>
-              Several EV OEMs incorporate our products and components, a
-              testament to the exceptional quality of our system. (Manufactured
-              by us)
+              You are committed to clean, reliable, economical and evolved
+              transportation.
+              <br />
+              We are committed to high quality, innovative, efficient and
+              best-in-class electric and hybrid transportation products and
+              solutions.
+              <br />
+              <br />
+              How did we miss each other?
+              <br />
+              If your mission is to evolve rides of your customers with electric
+              and hybrid transportation at scale, we must become allies. Several
+              EV OEMs already are.
             </p>
           </div>
           {/* carousel */}
-          <Carousel fade>
+          <Carousel fade className="carouselContainer">
             {carouselContent.map((content, index) => (
               <Carousel.Item className="carousel_flex" key={index}>
                 <div>
@@ -308,16 +464,18 @@ export default function Home() {
                     src={content.imageUrl} // Replace "/image1.jpg" with the path to your first image
                     alt="First slide"
                   />
-                </div>
-                <div>
-                  <Carousel.Caption>
-                    <h3 className="reusable_heading ">
-                      {content.captionHeader}
-                    </h3>
-                    <p>{content.captionDescription}</p>
-                    <br />
-                    <button className="button_pink">Know more</button>
-                  </Carousel.Caption>
+                  <br />
+                  <br />
+                  <div className="carouselContent">
+                    <Carousel.Caption>
+                      <h3 className="reusable_heading ">
+                        {content.captionHeader}
+                      </h3>
+                      <p>{content.captionDescription}</p>
+                      <br />
+                      <button className="button_pink">Know more</button>
+                    </Carousel.Caption>
+                  </div>
                 </div>
               </Carousel.Item>
             ))}
@@ -376,15 +534,10 @@ export default function Home() {
         <div className="ourClients">
           <div className="centerHeading">
             <h1 className="reusable_heading">
-              Trusted by Industry Leading <br />
-              <span>Clients</span>{" "}
+              Why Green Tiger Mobility Solutions
             </h1>
+            <h3>why we can revolutionise e-mobility Together.</h3>
             <br />
-            <p>
-              Several EV OEMs incorporate our products and components, a
-              testament to the exceptional quality of our system. (Manufactured
-              by us)
-            </p>
           </div>
           <div className="clientLogos" ref={containerRef}>
             {clients.map((logos, index) => (
@@ -409,12 +562,13 @@ export default function Home() {
           <h3 className="awardsHeading reusable_heading">
             Awards & Association
           </h3>
-          <div className="awardsSubHeading">
+          <div className="awardsSubHeading" ref={containerRef2}>
             {awards.map((award, index) => (
               <div className="awardCards glass_tile_specs2" key={index}>
-                <img src="../images/Medal.svg" alt="" />
+                <img src={award.awardImage} alt="" />
                 <br />
-                <h3>{award.title}</h3>
+                <h5>{award.title}</h5>
+                <br />
                 <p>{award.description}</p>
               </div>
             ))}
@@ -427,17 +581,14 @@ export default function Home() {
             <h3 className="reusable_heading">
               We create an <span> IMPACT</span>
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              temporibus cupiditate laudantium distinctio tempora minus numquam
-              quam fugiat, aliquid sed obcaecati laboriosam, ullam
-              exercitationem blanditiis itaque? Blanditiis repellat explicabo at
-              laboriosam. Fuga, quod officia rem mollitia impedit illum odit
-              modi, perspiciatis vitae, quaerat dignissimos facilis ipsum nisi
-              beatae repellendus rerum?
-            </p>
-            <img src="../images/imageDummy.svg" alt="" />
             <br />
+            <p>
+              We are reimagining mobility and transportation, with pioneering
+              innovation in clean fuel-driven transportation technology.
+            </p>
+            <br />
+            <img src="../images/imageDummy.svg" alt="" />
+            <br /> <br />
             <button
               className="button_pink mobileStyle"
               style={{ width: "fit-content" }}

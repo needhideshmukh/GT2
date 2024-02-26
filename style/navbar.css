@@ -79,7 +79,9 @@
 
   .menuItems.show {
     display: flex;
-    max-height: max-content;
+    max-height: fit-content;
+    z-index: 500;
+    overflow-y: visible;
   }
 
   .menuItems a {
