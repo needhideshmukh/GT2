@@ -219,7 +219,7 @@ export default function Home() {
     }
 
     // Auto-scroll every 3 seconds
-    scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+    scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
 
     // Pause auto-scrolling when the user interacts with the container
     const handleMouseEnter = () => {
@@ -227,7 +227,7 @@ export default function Home() {
     }
 
     const handleMouseLeave = () => {
-      scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+      scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
     }
 
     container.addEventListener("mouseenter", handleMouseEnter)
