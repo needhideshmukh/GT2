@@ -402,7 +402,7 @@ export default function Home() {
           </div>
 
           <div className="glassContainer">
-            <h1 className="reusable_heading heading_right">
+            <h1 className="reusable_heading">
               <span>EV</span>olve your petrol ride to an electric one <br />{" "}
             </h1>
 

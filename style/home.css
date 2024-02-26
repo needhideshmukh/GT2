@@ -57,7 +57,7 @@ hr {
 .reusable_heading {
   font-size: var(--heading-font-size);
   overflow-y: hidden;
-  font-weight: 200;
+  font-weight: 700;
 }
 
 .reusable_heading span {
@@ -154,13 +154,12 @@ hr {
 .pureEVContainer {
   background-color: var(--background-dark-grey);
   color: var(--white);
-  padding: 0% 7% 7% 0%;
+  padding: 7%;
   overflow-y: hidden;
 }
 .arrowsBackground {
   /* display: none; */
-  height: 133vh;
-  transform: translateX(40%);
+  transform: translate(40%, -10%);
   z-index: 4;
   padding-right: 40px;
 }
@@ -574,7 +573,7 @@ hr {
   .carouselImage {
     height: fit-content;
     margin-right: auto;
-    width: 83%;
+    width: 80%;
   }
   .carouselContainer {
     display: flex;
