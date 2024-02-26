@@ -318,9 +318,8 @@ export default function Home() {
               <div className="heading_content">
                 <h1 className="reusable_heading">
                   The world’s first hybrid 2-wheeler upgrade <br />
-                  <span>I-HYBRID</span>
+                  <span>I-Hybrid</span>
                 </h1>
-                <br />
                 <p>
                   Evolve your ride to the best of both worlds. Upgrade your
                   petrol engine scooter to efficient, eco-friendly electric
@@ -345,10 +344,6 @@ export default function Home() {
 
               <div className="vehicle_element">
                 <img src="../images/bike.png" alt="" srcset="" />
-                <div className="clients">
-                  <p>Client 1</p>
-                  <p>Client 2</p>
-                </div>
               </div>
             </div>
             <div className="leftHeroContainer">
@@ -408,8 +403,7 @@ export default function Home() {
 
           <div className="glassContainer">
             <h1 className="reusable_heading heading_right">
-              EVolve your petrol ride to an electric one <br />{" "}
-              <span> PURE EV</span>
+              <span>EV</span>olve your petrol ride to an electric one <br />{" "}
             </h1>
 
             <div className="evComponents_specs_container">
@@ -456,7 +450,7 @@ export default function Home() {
             </p>
           </div>
           {/* carousel */}
-          <Carousel fade>
+          <Carousel>
             {carouselContent.map((content, index) => (
               <Carousel.Item key={index}>
                 <div className="carouselContainer ">

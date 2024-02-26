@@ -20,6 +20,7 @@ export default function Navbar() {
       <div className="logo">
         <img src="../images/gt-removebg-preview.png" alt="Logo" />
       </div>
+      <span> </span>
       <div className="hamburgerMenu" onClick={toggleMenu}>
         {showMenu ? (
           <img
@@ -61,6 +62,8 @@ export default function Navbar() {
       <a className="desktopNav" href="#">
         MOBILITY SOLUTION
       </a>
+      <span> </span>
+
       <div>
         <button className="button_pink desktopNav">CONTACT</button>
       </div>
