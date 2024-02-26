@@ -1,0 +1,5 @@
+* {
+  font-family: var(--primary-font-family);
+  font-size: var(--paragraph-font-size);
+  overflow-x: hidden;
+}
