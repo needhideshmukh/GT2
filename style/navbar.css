@@ -5,6 +5,7 @@
   padding: 1% 2%;
   background-color: var(--background-dark-grey);
   color: var(--white);
+  position: absolute;
 }
 .navbarContainer a {
   color: var(--white);
@@ -82,6 +83,7 @@
     max-height: fit-content;
     z-index: 500;
     overflow-y: visible;
+    position: absolute;
   }
 
   .menuItems a {

@@ -195,6 +195,7 @@ export default function Home() {
   ]
 
   //Awards section auto Scrolling + mouse hover pause
+  // Awards section auto Scrolling + mouse hover pause
   const containerRef2 = useRef(null)
   const itemWidthRef2 = useRef(0)
   const scrollIntervalRef2 = useRef(null)
@@ -202,7 +203,7 @@ export default function Home() {
   useEffect(() => {
     const container = containerRef2.current
     const items = container.querySelectorAll(".awardCards")
-    const itemWidth = items[0].offsetWidth // Get width of one item + 50px gap
+    const itemWidth = items[0].offsetWidth + 20 // Get width of one item + padding
     itemWidthRef2.current = itemWidth
 
     // Function to scroll the container to the next item
@@ -219,7 +220,7 @@ export default function Home() {
     }
 
     // Auto-scroll every 3 seconds
-    scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
+    scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
 
     // Pause auto-scrolling when the user interacts with the container
     const handleMouseEnter = () => {
@@ -227,7 +228,7 @@ export default function Home() {
     }
 
     const handleMouseLeave = () => {
-      scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
+      scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
     }
 
     container.addEventListener("mouseenter", handleMouseEnter)
@@ -455,26 +456,23 @@ export default function Home() {
             </p>
           </div>
           {/* carousel */}
-          <Carousel fade className="carouselContainer">
+          <Carousel fade>
             {carouselContent.map((content, index) => (
-              <Carousel.Item className="carousel_flex" key={index}>
-                <div>
+              <Carousel.Item key={index}>
+                <div className="carouselContainer ">
                   <img
                     className="d-block carouselImage"
                     src={content.imageUrl} // Replace "/image1.jpg" with the path to your first image
                     alt="First slide"
                   />
                   <br />
-                  <br />
-                  <div className="carouselContent">
-                    <Carousel.Caption>
-                      <h3 className="reusable_heading ">
-                        {content.captionHeader}
-                      </h3>
-                      <p>{content.captionDescription}</p>
-                      <br />
-                      <button className="button_pink">Know more</button>
-                    </Carousel.Caption>
+                  <div className="captionContainer">
+                    <h3 className="reusable_heading ">
+                      {content.captionHeader}
+                    </h3>
+                    <p>{content.captionDescription}</p>
+                    <br />
+                    <button className="button_pink">Know more</button>
                   </div>
                 </div>
               </Carousel.Item>

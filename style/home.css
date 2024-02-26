@@ -234,9 +234,17 @@ hr {
   aspect-ratio: 1/1;
 }
 
+.carouselContainer {
+  display: flex;
+}
+
 .carousel-item {
   padding: 0 0 0 15%;
   display: flex;
+}
+
+.captionContainer {
+  padding: 5% 15% 5% 10%;
 }
 
 .carousel-caption {
@@ -250,6 +258,7 @@ hr {
   padding: 0;
   margin-left: 75% !important; /* 25% originally */
   margin-bottom: 1rem;
+  margin-top: 5%;
 }
 
 /* ------------------------> metrics */
@@ -316,7 +325,7 @@ hr {
   justify-content: flex-start;
   text-align: center;
   overflow-x: hidden !important;
-
+  width: 100%;
   flex-wrap: nowrap;
   /* height: 100vh; */
 }
@@ -338,8 +347,11 @@ hr {
   width: 20vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden !important;
+
   align-items: center;
-  margin: 1%;
+  margin: 0.1%;
+  transition: transform 0.3s ease;
 }
 
 .awardCards p {
@@ -570,21 +582,26 @@ hr {
   .carouselImage {
     height: fit-content;
     margin-right: auto;
-    width: 80%;
+    width: 83%;
+  }
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
   }
 
   .carousel-item {
     display: block;
   }
 
-  .carousel_flex {
-    margin-bottom: 100%;
-  }
-
   .carousel-caption {
     margin-left: 0%;
-    margin-bottom: -85%;
+    margin-bottom: -100%;
     text-align: center !important;
+    z-index: 1000;
+  }
+
+  .captionContainer {
+    padding: 10% 10% 10% 5%;
   }
 
   .carousel-indicators {
@@ -593,11 +610,14 @@ hr {
     margin-left: auto !important; /* 25% originally */
     margin-right: auto !important;
     margin-bottom: 1rem;
+    margin-top: 5%;
   }
 
   //newly added
   .carouselContainer {
-    overflow-y: visible;
+    overflow-y: auto;
+    z-index: 1000;
+    height: fit-content;
   }
 
   .carouselContent {
@@ -624,12 +644,11 @@ hr {
     border-radius: 30px;
     scroll-snap-align: center; /* Snap items to center */
     display: flex;
-    flex: 0 0 auto; /* Ensure each item has fixed size */
     justify-content: center;
     align-items: center;
-    margin-right: 120px;
-    padding-right: 10px;
-    width: 100%;
+    margin: 0 120px;
+    padding: 0 10px;
+    width: 80vw;
   }
   /* ------------------------> Awards */
   .waveBackground {
@@ -637,11 +656,14 @@ hr {
   }
 
   .glass_tile_specs2 {
-    padding: 5%;
+    width: 100%; /* Allow cards to expand based on content */
+
+    padding: 5% 0%;
   }
 
   .awardCards {
-    width: 90vw; /* Allow cards to expand based on content */
+    width: 100%;
+    margin-right: 19px;
   }
 
   /* ------------------------> Imapct */
