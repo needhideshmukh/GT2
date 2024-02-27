@@ -25,13 +25,14 @@ body {
   --background-light-grey: #242424;
   --background-dark-grey: #191919;
   --glass-effect-tile: hsla(0, 0%, 0%, 0.789);
-  --primary-font-family: "Exo", sans-serif;
+  --primary-font-family: "Exo 2", sans-serif
+  --secondary-font-family: "Open Sans", sans-serif;
 
   --paragraph-font-size: 15px;
-  --heading-font-size: 20px;
-  --green-heading: 60px;
+  --heading-font-size: 25px;
+  --green-heading: 65px;
 
-  --paragraph-font-size-mobile: 15px;
+  --paragraph-font-size-mobile: 13px;
   --heading-font-size-mobile: 20px;
   --green-heading-mobile: 40px;
 }
@@ -49,12 +50,12 @@ body {
   text-decoration: none;
   border: none;
   text-transform: uppercase;
+  transition: all 0.3s ease-in;
 }
 
 .button_pink:hover {
   background: transparent;
   border: 1px solid var(--fluorescent-pink);
-  transition: all 0.2s ease-in;
   text-decoration: none;
 }
 

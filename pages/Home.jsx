@@ -22,15 +22,6 @@ export default function Home() {
     setIndex(selectedIndex)
   }
 
-  //Pure EV features
-  const features = [
-    "Make your rides more economical, clean and tech enabled with our pure EV conversion kit. And, extend their life too! ",
-    "Our pure EV retrofitment turns your old, petrol-guzzling scooter into a high-tech, eco-friendly EV. With unbeatable economics of ~25p per km and convenience.",
-    "Battery Subscription Cost of battery = 0! Just subscribe to the battery swapping service and swap batteries in 2 minutes at a reasonable monthly fee.",
-    "Battery Ownership Own your batter from day 1. Charge the removable battery anytime, anywhere.",
-    "Approved by RTOs, ARAI and all competent authorities. Coming soon! ",
-  ]
-
   //B2B carousel Content
   const carouselContent = [
     {
@@ -195,7 +186,6 @@ export default function Home() {
   ]
 
   //Awards section auto Scrolling + mouse hover pause
-  // Awards section auto Scrolling + mouse hover pause
   const containerRef2 = useRef(null)
   const itemWidthRef2 = useRef(0)
   const scrollIntervalRef2 = useRef(null)
@@ -203,7 +193,7 @@ export default function Home() {
   useEffect(() => {
     const container = containerRef2.current
     const items = container.querySelectorAll(".awardCards")
-    const itemWidth = items[0].offsetWidth + 20 // Get width of one item + padding
+    const itemWidth = items[0].offsetWidth + 50 // Get width of one item + padding
     itemWidthRef2.current = itemWidth
 
     // Function to scroll the container to the next item
@@ -220,7 +210,7 @@ export default function Home() {
     }
 
     // Auto-scroll every 3 seconds
-    scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+    scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
 
     // Pause auto-scrolling when the user interacts with the container
     const handleMouseEnter = () => {
@@ -228,7 +218,7 @@ export default function Home() {
     }
 
     const handleMouseLeave = () => {
-      scrollIntervalRef2.current = setInterval(scrollToNextItem, 2500)
+      scrollIntervalRef2.current = setInterval(scrollToNextItem, 1000)
     }
 
     container.addEventListener("mouseenter", handleMouseEnter)
@@ -306,20 +296,31 @@ export default function Home() {
       <main>
         {/* ---------------------------------------- */}
         <div className="homeContainer">
-          <img
-            className="play_buton"
-            onClick={toggleImage}
-            src="../images/Play button.png"
-            alt=""
-          />
-
+          <div>
+            {isToggled ? (
+              <img
+                className="play_buton"
+                onClick={toggleImage}
+                src="../images/toggle2.svg"
+                alt=""
+              />
+            ) : (
+              <img
+                className="play_buton"
+                onClick={toggleImage}
+                src="../images/toggle1.svg"
+                alt=""
+              />
+            )}
+          </div>
           <div className="herContainer">
             <div className="rightHeroContainer">
               <div className="heading_content">
-                <h1 className="reusable_heading">
-                  The world’s first hybrid 2-wheeler upgrade <br />
-                  <span>I-Hybrid</span>
-                </h1>
+                <h3 className="reusable_heading">
+                  The world’s first <br />{" "}
+                  <span className="iHybridtext">I-Hybrid</span> <br /> 2-wheeler
+                  upgrade <br />
+                </h3>
                 <p>
                   Evolve your ride to the best of both worlds. Upgrade your
                   petrol engine scooter to efficient, eco-friendly electric
@@ -342,9 +343,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="vehicle_element">
+              {/* <div className="vehicle_element">
                 <img src="../images/bike.png" alt="" srcset="" />
-              </div>
+              </div> */}
             </div>
             <div className="leftHeroContainer">
               <div>
@@ -360,19 +361,15 @@ export default function Home() {
 
               <div className="glass_tile_specs3">
                 <div className="specificaions">
+                  <p>
+                    Approved by RTOs, ARAI and all competent authorities. <br />{" "}
+                    Coming soon!{" "}
+                  </p>
+                </div>
+                {/* <div className="specificaions">
                   <h3>Title1</h3>
                   <p>100 Km</p>
-                </div>
-
-                <div className="specificaions">
-                  <h3>Title1</h3>
-                  <p>100 Km</p>
-                </div>
-
-                <div className="specificaions">
-                  <h3>Title1</h3>
-                  <p>100 Km</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -381,6 +378,18 @@ export default function Home() {
         {/* ----------------------------> Pure EV */}
         <div className="pureEVContainer">
           <div className="components_uplift">
+            <img
+              className="arrowsBackground"
+              src="../images/arrows_background.svg"
+              alt=""
+              srcset=""
+            />
+            <img
+              className="arrowsBackground"
+              src="../images/arrows_background.svg"
+              alt=""
+              srcset=""
+            />
             <img
               className="arrowsBackground"
               src="../images/arrows_background.svg"
@@ -402,24 +411,58 @@ export default function Home() {
           </div>
 
           <div className="glassContainer">
-            <h1 className="reusable_heading">
+            <h1 className="reusable_heading centerHeading">
               <span>EV</span>olve your petrol ride to an electric one <br />{" "}
             </h1>
-
             <div className="evComponents_specs_container">
-              <div className="evVehicle">
-                <img src="../images/BOLT-Electric.png" alt="" />
+              <div className=" evDiv1">
+                <p>
+                  Does your business have an aging fleet of petrol scooters with
+                  high running costs?
+                </p>
+                <p>
+                  Do you have an old petrol scooter that is no longer
+                  economical, tech-savvy or smooth?
+                </p>
+                <p>
+                  Make your rides more economical, clean and tech enabled with
+                  our pure EV conversion kit. And, extend their life too!
+                </p>
+                <p>
+                  {" "}
+                  Our pure EV retrofitment turns your old, petrol-guzzling
+                  scooter into a high-tech, eco-friendly EV. With unbeatable
+                  economics of ~25p per km and convenience.
+                </p>
               </div>
-
-              <div className="glass_tile_specs">
-                <h3>Features</h3>
-                {features.map((feature, index) => (
-                  <li key={index}>
-                    &#9889; <span> {feature}</span>
-                  </li>
-                ))}
-                <br />
-                <button className="button_pink">READ MORE</button>
+              <div className="batteryFeatures">
+                <div className="glass_tile_specs">
+                  <h3>Battery Subscription</h3>
+                  <p>
+                    Cost of battery = 0! <br />
+                    Just subscribe to the battery swapping service and swap
+                    batteries in 2 minutes at a reasonable monthly fee.
+                  </p>
+                  <button
+                    className="button_pink"
+                    style={{ width: "fit-content" }}
+                  >
+                    READ MORE
+                  </button>
+                </div>
+                <div className="glass_tile_specs">
+                  <h3>Battery Ownership</h3>
+                  <p>
+                    Own your batter from day 1. Charge the removable battery
+                    anytime, anywhere
+                  </p>
+                  <button
+                    className="button_pink"
+                    style={{ width: "fit-content" }}
+                  >
+                    Convert Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -454,12 +497,13 @@ export default function Home() {
             {carouselContent.map((content, index) => (
               <Carousel.Item key={index}>
                 <div className="carouselContainer ">
-                  <img
-                    className="d-block carouselImage"
-                    src={content.imageUrl} // Replace "/image1.jpg" with the path to your first image
-                    alt="First slide"
-                  />
-                  <br />
+                  <div>
+                    <img
+                      className="d-block carouselImage"
+                      src={content.imageUrl} // Replace "/image1.jpg" with the path to your first image
+                      alt="First slide"
+                    />
+                  </div>
                   <div className="captionContainer">
                     <h3 className="reusable_heading ">
                       {content.captionHeader}
@@ -479,13 +523,9 @@ export default function Home() {
         <div className="metrics">
           <div className="metricText">
             <h3 className="reusable_heading ImpactHeading">
-              Lorem ipsum dolor sit amet.
+              Why Green Tiger Mobility Solutions
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
-              temporibus! Dignissimos deserunt totam perferendis aperiam quam
-              nam aspernatur tempora iste.
-            </p>
+            <p>And why we can revolutionise e-mobility. Together.</p>
           </div>
           <div className="metricNumber_icons">
             <p>
@@ -526,10 +566,8 @@ export default function Home() {
         <div className="ourClients">
           <div className="centerHeading">
             <h1 className="reusable_heading">
-              Why Green Tiger Mobility Solutions
+              <span>Clients</span>
             </h1>
-            <h3>why we can revolutionise e-mobility Together.</h3>
-            <br />
           </div>
           <div className="clientLogos" ref={containerRef}>
             {clients.map((logos, index) => (
@@ -552,7 +590,7 @@ export default function Home() {
           </div>
 
           <h3 className="awardsHeading reusable_heading">
-            Awards & Association
+            <span> Awards & Association</span>
           </h3>
           <div className="awardsSubHeading" ref={containerRef2}>
             {awards.map((award, index) => (

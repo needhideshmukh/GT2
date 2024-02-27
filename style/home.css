@@ -1,7 +1,7 @@
 // Navbar Start
 * {
-  font-family: var(--primary-font-family);
   font-size: var(--paragraph-font-size);
+  font-family: var(--secondary-font-family);
   overflow-x: hidden;
 }
 hr {
@@ -21,24 +21,22 @@ hr {
 }
 
 .play_buton {
+  width: 100px;
   position: absolute;
-  margin: 25% 48%;
+  margin: 50vh 47vw;
   cursor: pointer;
-  transition: transform 0.7s;
 }
 
-.play_buton:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.2);
+.iHybridtext {
+  font-size: 90px !important;
 }
 
 .rightHeroContainer {
   background: linear-gradient(
     to bottom left,
     var(--background-dark-grey),
-    95%,
-    var(--fluorescent-green)
+    85%,
+    var(--primary-green)
   );
 }
 .rightHeroContainer p {
@@ -47,7 +45,7 @@ hr {
 
 .heading_content {
   /* padding: 5% 0 0 5%; */
-  padding: 15% 15% 0;
+  padding: 10% 15%;
 }
 
 .herContainer > * {
@@ -55,16 +53,22 @@ hr {
 }
 
 .reusable_heading {
+  font-family: var(--primary-font-family);
+
   font-size: var(--heading-font-size);
   overflow-y: hidden;
   font-weight: 700;
+  line-height: 4ch;
 }
 
 .reusable_heading span {
   font-size: var(--green-heading);
-  color: var(--primary-green);
+  font-family: var(--secondary-font-family);
+  color: transparent;
   font-style: italic;
   font-weight: 900;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--secondary-green);
 }
 .reusable_heading p {
   font-size: var(--paragraph-font-size);
@@ -114,12 +118,12 @@ hr {
   border: 1px solid var(--white);
   text-transform: uppercase;
   margin-left: 5%;
+  transition: all 0.3s ease-in;
 }
 
 .button_white:hover {
   background: var(--white);
   color: var(--font-black);
-  transition: all 0.2s ease-in;
   text-decoration: none;
 }
 
@@ -155,13 +159,22 @@ hr {
   background-color: var(--background-dark-grey);
   color: var(--white);
   padding: 7%;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: fit-content;
+  position: relative;
 }
 .arrowsBackground {
-  /* display: none; */
-  transform: translate(40%, -10%);
+  height: 100%;
+  width: 20vw;
   z-index: 4;
   padding-right: 40px;
+}
+
+.components_uplift {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-5.5%, -12.5%);
 }
 
 .heading_right {
@@ -170,38 +183,42 @@ hr {
 }
 
 .evComponents_specs_container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
   align-items: center;
 }
-.evComponents_specs_container img {
-  transform: translateX(20%);
-  width: 100%;
-  /* margin: 25% 0; */
+
+.batteryFeatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+}
+
+.evDiv1 {
+  padding-right: 10%;
+}
+
+.evDiv1 p {
+  font-size: var(--paragraph-font-size);
 }
 
 .glass_tile_specs {
-  transform: translateX(-20%);
-  padding: 3% 5%;
+  /* transform: translateX(-20%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10%;
   background-color: var(--glass-effect-tile);
   border-radius: 30px;
+  text-align: center;
+  align-items: center;
   overflow: hidden;
-  height: 50%;
 }
 
 .glass_tile_specs h3 {
   font-weight: 700;
   font-size: var(--heading-font-size);
   padding-bottom: 10%;
-}
-
-.glass_tile_specs li {
-  list-style-type: none;
-  padding-bottom: 5%;
-}
-
-.components_uplift {
-  position: absolute;
 }
 
 /* ------------------------> B2B */
@@ -226,6 +243,7 @@ hr {
 
 .carouselContainer {
   display: flex;
+  align-items: center;
 }
 
 .carousel-item {
@@ -244,6 +262,7 @@ hr {
 }
 
 .carousel-indicators {
+  display: none !important;
   justify-content: flex-end !important;
   padding: 0;
   margin-left: 75% !important; /* 25% originally */
@@ -256,6 +275,7 @@ hr {
   display: grid;
   grid-template-columns: 1.5fr 2fr; /* means 2nd block is twice 1st block */
   justify-content: space-between;
+  align-items: center;
   background-color: var(--background-dark-grey);
   color: var(--white);
   padding: 7%;
@@ -360,6 +380,7 @@ hr {
 .glass_tile_specs2 {
   z-index: 1;
   padding: 1%;
+  margin: 1%;
   background-color: var(--glass-effect-tile);
   border-radius: 30px;
   overflow: hidden;
@@ -472,7 +493,9 @@ hr {
   }
   .reusable_heading span {
     font-size: var(--green-heading-mobile);
+    -webkit-text-stroke-width: 1.5px;
   }
+
   .reusable_heading p {
     font-size: var(--paragraph-font-size-mobile);
   }
@@ -481,18 +504,13 @@ hr {
     height: fit-content;
   }
 
+  .heading_content {
+    /* padding: 5% 0 0 5%; */
+    padding: 7%;
+  }
+
   .button_white {
     margin: 0;
-  }
-
-  .vehicle_element {
-    padding-top: 30%;
-    flex-direction: column;
-    transform: translateY(-20%);
-  }
-
-  .vehicle_element img {
-    z-index: -100;
   }
 
   .clients {
@@ -521,7 +539,7 @@ hr {
   }
   /* ------------------------> Pure EV */
   .pureEVContainer {
-    padding: 7% 0%;
+    padding: 7%;
     /* overflow-y: hidden; */
     height: fit-content;
   }
@@ -540,27 +558,20 @@ hr {
     display: block;
   }
 
-  .evVehicle {
-    transform: translate(-20%, 50%);
-    width: 100%;
-    display: none;
+  .evDiv1 {
+    text-align: center;
+    padding: 0 0 10% 0;
+  }
+
+  .batteryFeatures {
+    grid-template-columns: 1fr;
   }
 
   .glass_tile_specs {
     width: 90%;
-    margin-left: 23%;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-  }
-
-  .glass_tile_specs h3 {
-    text-align: center;
-    font-size: var(--heading-font-size-mobile);
-  }
-
-  .glass_tile_specs li {
-    font-size: var(--paragraph-font-size-mobile);
-    /* text-align: left; */
   }
 
   .components_uplift {
@@ -593,10 +604,11 @@ hr {
   }
 
   .captionContainer {
-    padding: 10% 10% 10% 5%;
+    padding: 10% 15% 10% 0;
   }
 
   .carousel-indicators {
+    display: none !important;
     justify-content: center !important;
     padding: 0;
     margin-left: auto !important; /* 25% originally */
@@ -649,13 +661,13 @@ hr {
 
   .glass_tile_specs2 {
     width: 100%; /* Allow cards to expand based on content */
-
+    margin: 0%;
     padding: 5% 0%;
   }
 
   .awardCards {
     width: 100%;
-    margin-right: 19px;
+    margin-right: 50px;
   }
 
   /* ------------------------> Imapct */
