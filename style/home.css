@@ -419,19 +419,20 @@ hr {
 }
 
 .pinterIndex {
-  background-color: var(--fluorescent-pink);
-  color: var(--white);
-  font-size: var(--paragraph-font-size);
+  /* background-color: var(--fluorescent-pink); */
+  font-size: var(--green-heading);
   width: var(--heading-font-size);
   height: var(--heading-font-size);
-  padding: 3%;
+  padding: 6%;
   font-weight: 700;
   margin-right: 5%;
-  border-radius: 50%; /* Ensures the container has a circular shape */
   display: flex; /* Align content in the center */
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */
   overflow: hidden;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--fluorescent-pink);
 }
 
 .ImpactHeading {
@@ -484,6 +485,10 @@ hr {
     padding: 0; /* Adjust padding for smaller screens */
   }
 
+  #navbar {
+    z-index: 10000;
+  }
+
   .herContainer {
     flex-direction: column;
   }
@@ -500,6 +505,8 @@ hr {
   }
 
   .reusable_heading span {
+    -webkit-text-stroke-width: 1.4px;
+
     font-size: var(--green-heading-mobile);
   }
 
@@ -577,6 +584,9 @@ hr {
     padding-bottom: 15%;
     text-align: center;
   }
+  .glass_tile_specs h3 p button {
+    overflow: hidden;
+  }
 
   .components_uplift {
     margin-left: auto;
@@ -631,6 +641,7 @@ hr {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
   }
 
   .metricNumber_icons {
@@ -693,8 +704,17 @@ hr {
     margin-right: auto;
   }
 
+  .pointerFlex {
+    align-items: flex-start;
+  }
+
   .pinterIndex {
-    font-size: var(--heading-font-size-mobile);
+    font-size: var(--green-heading-mobile);
+    width: var(--heading-font-size);
+    height: var(--heading-font-size);
+    padding: 7%;
+    font-weight: 200;
+    -webkit-text-stroke-width: 1px;
   }
   /* ------------------------> Press */
   .pressHeading {

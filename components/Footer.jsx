@@ -6,18 +6,7 @@ const Footer = () => {
   const categories = [
     {
       title: "User focused",
-      links: [
-        "Contact Us",
-        "Home",
-        "i-Hybrid",
-        "Pure EV",
-        "Mobility Solution",
-        "About",
-        "Insights",
-        "Disclaimer",
-        "Terms & Conditions",
-        "Privacy Policy",
-      ],
+      links: ["Contact Us", "Home", "i-Hybrid", "Pure EV"],
     },
     {
       title: "Business focused",

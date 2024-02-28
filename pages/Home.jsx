@@ -292,7 +292,7 @@ export default function Home() {
   // ----------------> return
   return (
     <div>
-      <Navbar />
+      <Navbar id="navbar" />
       <main>
         {/* ---------------------------------------- */}
         <div className="homeContainer">
@@ -453,7 +453,7 @@ export default function Home() {
         </div>
 
         {/* ----------------------------> B2B solution */}
-        {/* <div className="b2bContainer">
+        <div className="b2bContainer">
           <div className="centerHeading">
             <h1 className="reusable_heading">
               Evolving business of EV OEMs at scale, one solution at a time
@@ -497,8 +497,7 @@ export default function Home() {
               </Carousel.Item>
             ))}
           </Carousel>
-
-        </div> */}
+        </div>
 
         {/* ----------------------------> Metrics */}
         <div className="metrics">
