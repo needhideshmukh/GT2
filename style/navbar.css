@@ -19,7 +19,7 @@
 
 .menuItems {
   display: flex;
-  display: none;
+  /* display: none; */
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--background-dark-grey);

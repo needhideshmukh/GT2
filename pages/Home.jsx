@@ -471,27 +471,23 @@ export default function Home() {
               We must become allies. Several EV OEMs already are.
             </p>
           </div>
-
           <Carousel>
-            {carouselContent.map((content, index) => (
+            {carouselContent.map((carouselImage, index) => (
               <Carousel.Item key={index}>
-                <div>
-                  <div className="carouselContainer ">
-                    <div>
-                      <img
-                        className="d-block carouselImage"
-                        src={content.imageUrl}
-                        alt="First slide"
-                      />
-                    </div>
-                    <div className="captionContainer">
-                      <h3 className="reusable_heading ">
-                        {content.captionHeader}
-                      </h3>
-                      <p>{content.captionDescription}</p>
-                      <br />
-                      <button className="button_pink">Know more</button>
-                    </div>
+                <div className="carouselContainer ">
+                  <div>
+                    <img
+                      className="d-block carouselImage"
+                      src={carouselImage.imageUrl}
+                    />
+                  </div>
+                  <div className="captionContainer">
+                    <h3 className="reusable_heading ">
+                      {carouselImage.captionHeader}
+                    </h3>
+                    <p>{carouselImage.captionDescription}</p>
+                    <br />
+                    <button className="button_pink">Know more</button>
                   </div>
                 </div>
               </Carousel.Item>
