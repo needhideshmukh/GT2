@@ -29,12 +29,12 @@ body {
   --secondary-font-family: "Open Sans", sans-serif;
 
   --paragraph-font-size: 15px;
-  --heading-font-size: 25px;
+  --heading-font-size: 35px;
   --green-heading: 65px;
 
   --paragraph-font-size-mobile: 13px;
   --heading-font-size-mobile: 20px;
-  --green-heading-mobile: 40px;
+  --green-heading-mobile: 36px;
 }
 
 .button_pink {

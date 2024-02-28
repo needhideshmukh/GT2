@@ -29,6 +29,7 @@ hr {
 
 .iHybridtext {
   font-size: 90px !important;
+  line-height: 2ch;
 }
 
 .rightHeroContainer {
@@ -58,7 +59,7 @@ hr {
   font-size: var(--heading-font-size);
   overflow-y: hidden;
   font-weight: 700;
-  line-height: 4ch;
+  line-height: 3ch;
 }
 
 .reusable_heading span {
@@ -275,7 +276,7 @@ hr {
   display: grid;
   grid-template-columns: 1.5fr 2fr; /* means 2nd block is twice 1st block */
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   background-color: var(--background-dark-grey);
   color: var(--white);
   padding: 7%;
@@ -418,14 +419,13 @@ hr {
 }
 
 .pinterIndex {
-  background-color: hsla(120, 90%, 88%, 0.7);
-  color: var(--primary-green);
-  font-size: var(--heading-font-size);
-  width: var(
-    --heading-font-size
-  ); /* Adjust the width and height to control the size of the circle */
+  background-color: var(--fluorescent-pink);
+  color: var(--white);
+  font-size: var(--paragraph-font-size);
+  width: var(--heading-font-size);
   height: var(--heading-font-size);
-  padding: 5%;
+  padding: 3%;
+  font-weight: 700;
   margin-right: 5%;
   border-radius: 50%; /* Ensures the container has a circular shape */
   display: flex; /* Align content in the center */
@@ -491,14 +491,18 @@ hr {
   .reusable_heading {
     font-size: var(--heading-font-size-mobile);
   }
-  .reusable_heading span {
-    font-size: var(--green-heading-mobile);
-    -webkit-text-stroke-width: 1.5px;
+  .iHybridtext {
+    font-size: 50px !important;
   }
 
   .reusable_heading p {
     font-size: var(--paragraph-font-size-mobile);
   }
+
+  .reusable_heading span {
+    font-size: var(--green-heading-mobile);
+  }
+
   .rightHeroContainer {
     text-align: center;
     height: fit-content;
@@ -568,9 +572,9 @@ hr {
   }
 
   .glass_tile_specs {
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 15%;
     text-align: center;
   }
 
@@ -615,13 +619,6 @@ hr {
     margin-right: auto !important;
     margin-bottom: 1rem;
     margin-top: 5%;
-  }
-
-  //newly added
-  .carouselContainer {
-    overflow-y: auto;
-    z-index: 1000;
-    height: fit-content;
   }
 
   .carouselContent {

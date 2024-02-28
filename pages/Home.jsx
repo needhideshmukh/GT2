@@ -244,7 +244,7 @@ export default function Home() {
       index: 2,
       title: "Championing sustainability",
       description:
-        "Enabling sustainable transportation at scale with 3Rs (Reduce, Reuse, and Recycle). Reuse the petrol 2-wheeler as an i-Hybrid vehicle. Reduce material scrappage by converting old vehicles into either i-Hybrid or Full EV. Recycle the vehicle with Green Tiger’s electric powertrain and extend its life by 5+ years. Enabled by our green manufacturing practices & auditable trail of carbon footprint for our EV OEM customers.",
+        "Enabling sustainable transportation at scale with 3Rs (Reduce, Reuse, Recycle). Reuse and reduce scrappage by converting into hybrid or electric vehicles and recycle by extending their life. Enabled by green manufacturing & auditable trail of carbon footprint.",
     },
     {
       index: 3,
@@ -256,13 +256,13 @@ export default function Home() {
       index: 4,
       title: "	Evolving the servicing ecosystem",
       description:
-        "Gradual & smooth skill transition for all mechanics with i-Hybrid conversion. Eliminating livelihood risk of the many petrol scooter mechanics of India by going beyond EV-only mobility in a short span. Taking petrol & EVs hand-in-hand to secure, enable and positively transform the servicing ecosystem.",
+        "Taking petrol & electric mobility together to secure, enable and positively transform the servicing ecosystem. Eliminating livelihood risk by going beyond immediate EV-only mobility. ",
     },
     {
       index: 5,
       title: "Job creation & Make In India",
       description:
-        "Creating direct and indirect employment in India through services across the EV ecosystem, From vehicle conversions to manufacturing & distribution of EV powertrain components. Also, working with various institutions & government bodies on sustainable policy-making for the benefit of industry & society at large.",
+        "Creating direct and indirect employment across Indian EV ecosystem through vehicle conversions, manufacturing & distribution of components. Also, working with institutions & government bodies on sustainable policymaking to benefit of industry & society at large.",
     },
   ]
 
@@ -318,24 +318,17 @@ export default function Home() {
               <div className="heading_content">
                 <h3 className="reusable_heading">
                   The world’s first <br />{" "}
-                  <span className="iHybridtext">I-Hybrid</span> <br /> 2-wheeler
-                  upgrade <br />
+                  <span className="iHybridtext">I-Hybrid</span>
+                  <br /> 2-wheeler upgrade <br />
                 </h3>
                 <p>
                   Evolve your ride to the best of both worlds. Upgrade your
-                  petrol engine scooter to efficient, eco-friendly electric
-                  transmission with the safety net of your petrol engine as
-                  backup.
+                  petrol engine scooter to an efficient, eco-friendly electric
+                  one with the petrol engine as backup. <br />
                   <br />
-                  <br />
-                  Charging the removable battery anytime, anywhere is easy.
-                  Switching between EV and petrol mode with just a flick is
-                  easier.
-                  <br />
-                  <br />
-                  Also, give your scooter the edge of smart nex-gen tech -
-                  remote locking, theft alert, fall alert, real-time vehicle
-                  diagnosis and more.
+                  Evolve your ride to the best of both worlds. Upgrade your
+                  petrol engine scooter to an efficient, eco-friendly electric
+                  one with the petrol engine as backup.
                 </p>
                 <div>
                   <button className="button_pink">READ MORE</button>
@@ -417,22 +410,13 @@ export default function Home() {
             <div className="evComponents_specs_container">
               <div className=" evDiv1">
                 <p>
-                  Does your business have an aging fleet of petrol scooters with
-                  high running costs?
+                  Have an ageing petrol scooter or fleet of scooters with high
+                  running costs?{" "}
                 </p>
                 <p>
-                  Do you have an old petrol scooter that is no longer
-                  economical, tech-savvy or smooth?
-                </p>
-                <p>
-                  Make your rides more economical, clean and tech enabled with
-                  our pure EV conversion kit. And, extend their life too!
-                </p>
-                <p>
-                  {" "}
-                  Our pure EV retrofitment turns your old, petrol-guzzling
-                  scooter into a high-tech, eco-friendly EV. With unbeatable
-                  economics of ~25p per km and convenience.
+                  Evolve your ride into one with convenience, longevity,
+                  eco-friendliness and tech with our pure EV conversion. And,
+                  unbeatable economics at 25p per km!{" "}
                 </p>
               </div>
               <div className="batteryFeatures">
@@ -469,7 +453,7 @@ export default function Home() {
         </div>
 
         {/* ----------------------------> B2B solution */}
-        <div className="b2bContainer">
+        {/* <div className="b2bContainer">
           <div className="centerHeading">
             <h1 className="reusable_heading">
               Evolving business of EV OEMs at scale, one solution at a time
@@ -480,44 +464,41 @@ export default function Home() {
               You are committed to clean, reliable, economical and evolved
               transportation.
               <br />
-              We are committed to high quality, innovative, efficient and
-              best-in-class electric and hybrid transportation products and
-              solutions.
+              We are mission is to evolve rides across India with innovative,
+              efficient and best-in-class electric and hybrid transportation
+              products and solutions at scale.
               <br />
-              <br />
-              How did we miss each other?
-              <br />
-              If your mission is to evolve rides of your customers with electric
-              and hybrid transportation at scale, we must become allies. Several
-              EV OEMs already are.
+              We must become allies. Several EV OEMs already are.
             </p>
           </div>
-          {/* carousel */}
+
           <Carousel>
             {carouselContent.map((content, index) => (
               <Carousel.Item key={index}>
-                <div className="carouselContainer ">
-                  <div>
-                    <img
-                      className="d-block carouselImage"
-                      src={content.imageUrl} // Replace "/image1.jpg" with the path to your first image
-                      alt="First slide"
-                    />
-                  </div>
-                  <div className="captionContainer">
-                    <h3 className="reusable_heading ">
-                      {content.captionHeader}
-                    </h3>
-                    <p>{content.captionDescription}</p>
-                    <br />
-                    <button className="button_pink">Know more</button>
+                <div>
+                  <div className="carouselContainer ">
+                    <div>
+                      <img
+                        className="d-block carouselImage"
+                        src={content.imageUrl}
+                        alt="First slide"
+                      />
+                    </div>
+                    <div className="captionContainer">
+                      <h3 className="reusable_heading ">
+                        {content.captionHeader}
+                      </h3>
+                      <p>{content.captionDescription}</p>
+                      <br />
+                      <button className="button_pink">Know more</button>
+                    </div>
                   </div>
                 </div>
               </Carousel.Item>
             ))}
           </Carousel>
-          {/* carousel */}
-        </div>
+
+        </div> */}
 
         {/* ----------------------------> Metrics */}
         <div className="metrics">
@@ -629,7 +610,7 @@ export default function Home() {
           <div className="impactPointers">
             {impactPointers.map((impact, index) => (
               <div className="pointerFlex" key={index}>
-                <div className="pinterIndex">{impact.index}</div>
+                <div className="pinterIndex">{impact.index} </div>
                 <div className="impact_title_desc">
                   <h3 className="ImpactHeading">{impact.title}</h3>
                   <p>{impact.description}</p>
@@ -652,6 +633,7 @@ export default function Home() {
             {pressArticles.map((article, index) => (
               <div className="articleCard" key={index}>
                 <img src={article.imageUrl} alt="" srcset="" />
+                <br />
                 <h3 className="ImpactHeading">{article.captionHeader}</h3>
                 <p>{article.captionDescription}</p>
                 <button
