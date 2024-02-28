@@ -8,8 +8,9 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import "../style/home.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Carousel from "react-bootstrap/Carousel"
 import { CCarousel, CCarouselItem } from "@coreui/react"
+import "@coreui/coreui/dist/css/coreui.min.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function Home() {
   const [isToggled, setIsToggled] = useState(false)
@@ -473,28 +474,6 @@ export default function Home() {
               We must become allies. Several EV OEMs already are.
             </p>
           </div>
-          {/* <Carousel>
-            {carouselContent.map((carouselImage, index) => (
-              <Carousel.Item key={index}>
-                <div className="carouselContainer ">
-                  <div>
-                    <img
-                      className="d-block carouselImage"
-                      src={carouselImage.imageUrl}
-                    />
-                  </div>
-                  <div className="captionContainer">
-                    <h3 className="reusable_heading ">
-                      {carouselImage.captionHeader}
-                    </h3>
-                    <p>{carouselImage.captionDescription}</p>
-                    <br />
-                    <button className="button_pink">Know more</button>
-                  </div>
-                </div>
-              </Carousel.Item>
-            ))}
-          </Carousel> */}
 
           <CCarousel controls>
             {carouselContent.map((carouselImage, index) => (
@@ -657,7 +636,7 @@ export default function Home() {
                 <img src={article.imageUrl} alt="" srcset="" />
                 <br />
                 <h3 className="ImpactHeading">{article.captionHeader}</h3>
-                <p className="">{article.captionDescription}</p>
+                <p className="greyText">{article.captionDescription}</p>
                 <button
                   className="button_pink"
                   style={{ width: "fit-content" }}

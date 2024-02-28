@@ -609,7 +609,6 @@ hr {
     width: 80%;
   }
   .carouselContainer {
-    display: flex;
     flex-direction: column;
     text-align: center;
   }

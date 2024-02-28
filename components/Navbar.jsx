@@ -65,7 +65,9 @@ export default function Navbar() {
       <span> </span>
 
       <div>
-        <button className="button_pink desktopNav">CONTACT</button>
+        <button className="button_pink desktopNav">
+          <a href="https://green-tiger.vercel.app/Contact">Contact</a>
+        </button>
       </div>
 
       {showMenu && <div className="overlay" onClick={closeMenu}></div>}

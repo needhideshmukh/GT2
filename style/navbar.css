@@ -54,6 +54,7 @@
     background-color: var(--background-dark-grey);
     color: var(--white);
     margin: 0;
+    height: fit-content;
     position: absolute;
     position: fixed;
     top: 0;
@@ -78,7 +79,7 @@
     align-items: center;
     background-color: var(--background-dark-grey);
     padding: 20px;
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     width: 100%;
@@ -89,7 +90,7 @@
 
   .menuItems.show {
     display: flex;
-    max-height: fit-content;
+    max-height: 450px;
     z-index: 1100;
     overflow-y: visible;
     position: absolute;

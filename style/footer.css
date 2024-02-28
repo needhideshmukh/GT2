@@ -157,4 +157,11 @@ hr {
   .footer-widget-heading h3 {
     margin-bottom: 10%;
   }
+  .footer-menu ul {
+    padding: 0 !important;
+  }
+  .subfooter {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
 }
