@@ -4,8 +4,8 @@ ul {
 }
 
 hr {
-  border-bottom: 5px solid var(--background-light-grey);
-  opacity: 1 !important;
+  border-bottom: 1px solid var(--background-light-grey);
+  opacity: 0.5 !important;
 }
 .container {
   margin: 0% 0%;
@@ -132,6 +132,9 @@ hr {
 @media screen and (max-width: 768px) {
   .ctaFlex {
     flex-direction: column;
+  }
+  .single-cta {
+    padding-bottom: 5%;
   }
 
   .cta-text {

@@ -1,4 +1,5 @@
 .navbarContainer {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +54,7 @@
     background-color: var(--background-dark-grey);
     color: var(--white);
     margin: 0;
-    /* position: relative; */
+    position: absolute;
     position: fixed;
     top: 0;
     left: 0;
@@ -89,7 +90,7 @@
   .menuItems.show {
     display: flex;
     max-height: fit-content;
-    z-index: 500;
+    z-index: 1100;
     overflow-y: visible;
     position: absolute;
   }

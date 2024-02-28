@@ -50,7 +50,7 @@ hr {
 
 .heading_content {
   /* padding: 5% 0 0 5%; */
-  padding: 10% 15%;
+  padding: 15%;
 }
 
 .herContainer > * {
@@ -220,7 +220,7 @@ hr {
 
 .glass_tile_specs h3 {
   font-weight: 700;
-  font-size: var(--heading-font-size);
+  font-size: var(--subHeading);
   padding-bottom: 10%;
 }
 
@@ -437,6 +437,10 @@ hr {
   font-weight: 700;
 }
 
+.greyText {
+  color: var(--grey);
+}
+
 /* ------------------------> Press */
 .pressContainer {
   background-color: var(--background-dark-grey);
@@ -445,6 +449,7 @@ hr {
 }
 
 .pressHeading {
+  font-size: var(--heading-font-size);
   font-weight: 700;
   padding-bottom: 2%;
 }

@@ -293,7 +293,8 @@ export default function Home() {
   // ----------------> return
   return (
     <div>
-      <Navbar id="navbar" />
+      {/* <Navbar id="navbar" /> */}
+      <Navbar />
       <main>
         {/* ---------------------------------------- */}
         <div className="homeContainer">
@@ -423,7 +424,7 @@ export default function Home() {
               <div className="batteryFeatures">
                 <div className="glass_tile_specs">
                   <h3>Battery Subscription</h3>
-                  <p>
+                  <p className="greyText">
                     Cost of battery = 0! <br />
                     Just subscribe to the battery swapping service and swap
                     batteries in 2 minutes at a reasonable monthly fee.
@@ -437,7 +438,7 @@ export default function Home() {
                 </div>
                 <div className="glass_tile_specs">
                   <h3>Battery Ownership</h3>
-                  <p>
+                  <p className="greyText">
                     Own your batter from day 1. Charge the removable battery
                     anytime, anywhere
                   </p>
@@ -461,7 +462,7 @@ export default function Home() {
               <br /> <span>B2B Mobility Solutions</span>{" "}
             </h1>
             <br />
-            <p>
+            <p className="greyText">
               You are committed to clean, reliable, economical and evolved
               transportation.
               <br />
@@ -509,7 +510,9 @@ export default function Home() {
                     <h3 className="reusable_heading ">
                       {carouselImage.captionHeader}
                     </h3>
-                    <p>{carouselImage.captionDescription}</p>
+                    <p className="greyText">
+                      {carouselImage.captionDescription}
+                    </p>
                     <br />
                     <button className="button_pink">Know more</button>
                   </div>
@@ -528,31 +531,31 @@ export default function Home() {
             <p>And why we can revolutionise e-mobility. Together.</p>
           </div>
           <div className="metricNumber_icons">
-            <p>
+            <p className="greyText">
               <span>
                 <img src="../images/Vector.png" alt="" />
               </span>
               Lorem, ipsum dolor.
             </p>
-            <p>
+            <p className="greyText">
               <span>
                 <img src="../images/Vector.png" alt="" />
               </span>
               Lorem, ipsum dolor.
             </p>
-            <p>
+            <p className="greyText">
               <span>
                 <img src="../images/Vector.png" alt="" />
               </span>
               Lorem, ipsum dolor.
             </p>
-            <p>
+            <p className="greyText">
               <span>
                 <img src="../images/Vector.png" alt="" />
               </span>
               Lorem, ipsum dolor.
             </p>
-            <p>
+            <p className="greyText">
               <span>
                 <img src="../images/Vector.png" alt="" />
               </span>
@@ -612,7 +615,7 @@ export default function Home() {
               We create an <span> IMPACT</span>
             </h3>
             <br />
-            <p>
+            <p className="greyText">
               We are reimagining mobility and transportation, with pioneering
               innovation in clean fuel-driven transportation technology.
             </p>
@@ -632,7 +635,7 @@ export default function Home() {
                 <div className="pinterIndex">{impact.index} </div>
                 <div className="impact_title_desc">
                   <h3 className="ImpactHeading">{impact.title}</h3>
-                  <p>{impact.description}</p>
+                  <p className="greyText">{impact.description}</p>
                 </div>
               </div>
             ))}
@@ -654,7 +657,7 @@ export default function Home() {
                 <img src={article.imageUrl} alt="" srcset="" />
                 <br />
                 <h3 className="ImpactHeading">{article.captionHeader}</h3>
-                <p>{article.captionDescription}</p>
+                <p className="">{article.captionDescription}</p>
                 <button
                   className="button_pink"
                   style={{ width: "fit-content" }}
