@@ -34,7 +34,8 @@
   transition: max-height 0.3s ease; /* Smooth transition */
 }
 
-.menuItems a {
+.menuItems a button {
+  display: none;
   color: var(--white);
   text-decoration: none;
   font-weight: 700;

@@ -472,26 +472,89 @@ export default function Home() {
             </p>
           </div>
           <Carousel>
-            {carouselContent.map((carouselImage, index) => (
-              <Carousel.Item key={index}>
-                <div className="carouselContainer ">
-                  <div>
-                    <img
-                      className="d-block carouselImage"
-                      src={carouselImage.imageUrl}
-                    />
-                  </div>
-                  <div className="captionContainer">
-                    <h3 className="reusable_heading ">
-                      {carouselImage.captionHeader}
-                    </h3>
-                    <p>{carouselImage.captionDescription}</p>
-                    <br />
-                    <button className="button_pink">Know more</button>
-                  </div>
+            <Carousel.Item>
+              <div className="carouselContainer ">
+                <div>
+                  <img
+                    className="d-block carouselImage"
+                    src="../images/Rectangle 55.png"
+                  />
                 </div>
-              </Carousel.Item>
-            ))}
+                <div className="captionContainer">
+                  <h3 className="reusable_heading ">Battery Pack</h3>
+                  <p>
+                    All types of certified Li-ion battery packs, available as
+                    combination with our customisable BMS and telematics
+                  </p>
+                  <br />
+                  <button className="button_pink">Know more</button>
+                </div>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="carouselContainer ">
+                <div>
+                  <img
+                    className="d-block carouselImage"
+                    src="../images/Rectangle 56.png"
+                  />
+                </div>
+                <div className="captionContainer">
+                  <h3 className="reusable_heading ">
+                    Battery Management System (BMS)
+                  </h3>
+                  <p>
+                    Certified, Smart BMS with audio-visual integration,
+                    Bluetooth & CAN Communication
+                  </p>
+                  <br />
+                  <button className="button_pink">Know more</button>
+                </div>
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="carouselContainer ">
+                <div>
+                  <img
+                    className="d-block carouselImage"
+                    src="../images/Rectangle 57.png"
+                  />
+                </div>
+                <div className="captionContainer">
+                  <h3 className="reusable_heading ">Telematics</h3>
+                  <p>
+                    Smart, nex-gen telematics including remote-lock
+                    customization, instant accident alerts, live location
+                    tracking, fuel-gauge monitoring
+                  </p>
+                  <br />
+                  <button className="button_pink">Know more</button>
+                </div>
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="carouselContainer ">
+                <div>
+                  <img
+                    className="d-block carouselImage"
+                    src="../images/Rectangle 55.png"
+                  />
+                </div>
+                <div className="captionContainer">
+                  <h3 className="reusable_heading "> Analytics</h3>
+                  <p>
+                    Insights for your e-mobility ecosystem with our analytics
+                    solutions including BMS & controller metrics, rider
+                    profiling, environmental impact tracking & data
+                    visualisation
+                  </p>
+                  <br />
+                  <button className="button_pink">Know more</button>
+                </div>
+              </div>
+            </Carousel.Item>
           </Carousel>
         </div>
 
