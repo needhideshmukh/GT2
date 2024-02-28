@@ -121,24 +121,24 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="copyright-area">
-          <div className="subfooter">
-            <div className="">
-              <div className="copyright-text">
-                <p>Copyright &copy; 2024, All Right Reserved Green Tiger</p>
-              </div>
+      </div>
+      <div className="copyright-area">
+        <div className="subfooter">
+          <div className="">
+            <div className="copyright-text">
+              <p>Copyright &copy; 2024, All Right Reserved Green Tiger</p>
             </div>
-            {/* Footer Menu */}
-            <div className="row">
-              <div className="footer-menu">
-                <ul>
-                  {footerMenu.map((menu, index) => (
-                    <li key={index}>
-                      <a href={menu.url}>{menu.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          </div>
+          {/* Footer Menu */}
+          <div className="row">
+            <div className="footer-menu">
+              <ul>
+                {footerMenu.map((menu, index) => (
+                  <li key={index}>
+                    <a href={menu.url}>{menu.label}</a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
