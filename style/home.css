@@ -3,6 +3,7 @@
   font-size: var(--paragraph-font-size);
   font-family: var(--secondary-font-family);
   overflow-x: hidden;
+  z-index: -1;
 }
 hr {
   margin: 0 0 !important;
@@ -12,7 +13,6 @@ hr {
 } */
 
 .herContainer {
-  /* z-index: -5; */
   display: flex;
   justify-content: space-between;
   color: var(--white);
@@ -30,6 +30,10 @@ hr {
 .iHybridtext {
   font-size: 90px !important;
   line-height: 2ch;
+  font-style: italic;
+
+  -webkit-text-stroke-width: 3px !important;
+  -webkit-text-stroke-color: var(--secondary-green);
 }
 
 .rightHeroContainer {
@@ -56,19 +60,18 @@ hr {
 .reusable_heading {
   font-family: var(--primary-font-family);
 
-  font-size: var(--heading-font-size);
+  font-size: var(--subHeading);
   overflow-y: hidden;
   font-weight: 700;
   line-height: 3ch;
 }
 
 .reusable_heading span {
-  font-size: var(--green-heading);
+  font-size: var(--heading-font-size);
   font-family: var(--secondary-font-family);
   color: transparent;
-  font-style: italic;
   font-weight: 900;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--secondary-green);
 }
 .reusable_heading p {
@@ -167,7 +170,6 @@ hr {
 .arrowsBackground {
   height: 100%;
   width: 20vw;
-  z-index: 4;
   padding-right: 40px;
 }
 
@@ -372,10 +374,6 @@ hr {
 
 .awardCards h5 {
   font-weight: 700;
-}
-
-.waveDiv {
-  z-index: -1000;
 }
 
 .glass_tile_specs2 {
@@ -584,6 +582,11 @@ hr {
     padding-bottom: 15%;
     text-align: center;
   }
+
+  .glass_tile_specs h3 {
+    font-size: var(--heading-font-size-mobile);
+  }
+
   .glass_tile_specs h3 p button {
     overflow: hidden;
   }
@@ -614,7 +617,6 @@ hr {
     margin-left: 0%;
     margin-bottom: -100%;
     text-align: center !important;
-    z-index: 1000;
   }
 
   .captionContainer {

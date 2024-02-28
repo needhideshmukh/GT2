@@ -432,7 +432,7 @@ export default function Home() {
                     className="button_pink"
                     style={{ width: "fit-content" }}
                   >
-                    READ MORE
+                    Convert Now
                   </button>
                 </div>
                 <div className="glass_tile_specs">
